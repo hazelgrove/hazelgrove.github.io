@@ -146,21 +146,18 @@ function jseyes() {
 				"left:"+(this.eye1.x-this.eye1.w/2)+"px; top:"+(this.eye1.y-this.eye1.h/2)+"px; "+
 				"width:"+this.eye1.w+"px; height:"+this.eye1.h+"px'>\n"+
 				"<img src='"+this.eye1.img+"' "+
-				"width='"+this.eye1.w+"px' height='"+this.eye1.h+"px' "+
-				"onClick=\"location.href='"+this.link+"'\">\n"+
+				"width='"+this.eye1.w+"px' height='"+this.eye1.h+"px'\">\n"+
 				"</div>\n"+
 		
 				"<div id='__jseye2__' style='position:absolute; z-index:6; overflow:visible; "+
 				"left:"+(this.eye2.x-this.eye2.w/2)+"px; top:"+(this.eye2.y-this.eye2.h/2)+"px; "+
 				"width:"+this.eye2.w+"px; height:"+this.eye2.h+"px'>\n"+
 				"<img src='"+this.eye2.img+"' "+
-				"width='"+this.eye2.w+"px' height='"+this.eye2.h+"px' "+
-				"onClick=\"location.href='"+this.link+"'\">\n"+
+				"width='"+this.eye2.w+"px' height='"+this.eye2.h+"px'\">\n"+
 				"</div>\n"+
 		
 				"<img src='"+this.main.img+"' "+
-				"width='"+this.main.w+"px' height='"+this.main.h+"px' "+
-				"onClick=\"location.href='"+this.link+"'\">\n"+
+				"width='"+this.main.w+"px' height='"+this.main.h+"px'\">\n"+
 		
 			"</div>\n";
 		// Write image
