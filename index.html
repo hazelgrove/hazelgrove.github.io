@@ -37,10 +37,10 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body style="margin-top: 25px">
 
     <div class="container">
-      <div class="header clearfix">
+      <!--<div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="#">Home</a></li>
@@ -48,12 +48,29 @@
             <li role="presentation"><a href="#ack">Acknowledgments</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Hazelgrove</h3>
-      </div>
+        <h3 class="text-muted">Hazel Grove</h3>
+	  </div>-->
 
-      <div class="jumbotron">
-        <div style="width: 60%; float:left;"><h1>Hazelgrove Project</h1></div>
-        <div style="width: 30%; float:right;"></div>
+      <div class="jumbotron" style="background-color: #006633; color: white">
+		  <div class="row">
+			  <div class="col-md-10">
+				  <h1>Hazel Grove</h1>
+				<p>We are designing <strong>Hazel</strong>, a structured programming and authoring environment rooted in the principles of type theory.</p>
+			  </div>
+			  <div>
+				<p class="lead"> 
+				<script type="text/javascript" src="js/jseyes.js"></script>
+				<script type="text/javascript">
+					myeyes= new jseyes();
+					myeyes.main.img="imgs/hazel-logo.png";
+					myeyes.eye1.img="imgs/jseyeblack.gif";
+					myeyes.eye2.img="imgs/jseyeblack.gif";
+					myeyes.write();
+				</script>
+						</p>
+			  </div>
+	      </div>
+        <!--<div style="width: 30%; float:right;"></div>
         <p class="lead"> 
 
 
@@ -69,38 +86,56 @@
 
 
 
-        </p>
-        <!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
+		</p>-->
       </div>
-	  <h1>Hazelnut</h1>
+
+        <h1 class="page-header">
+            Projects
+        </h1>
+
+	  <div class="row marketing">
+		  <div class="col-md-10">
+			  <h2>Hazel</h2>
+			  <h4>Research Vision</h4>
+			  <p><a href="https://github.com/hazelgrove/hazel-vision-tr/raw/master/hazel-vision-tr.pdf">Toward Semantic Foundations for Program Editors</a> (draft)</p>
+	      </div>
+      </div>
+	  
       <div class="row marketing">
-        <div class="col-lg-12">
-          <h4>Research Paper</h4>
-          <p><a href="https://arxiv.org/abs/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a> to appear at POPL17.</p>
+        <div class="col-md-10">
+	  <h2>Hazelnut</h2>
+			<p>To start, we have developed a core calculus, <strong>Hazelnut</strong>, that establishes 1) principles for reasoning statically in the presence of holes and type inconsistencies, and 2) a semantics of typed edit actions.</p>
+          <h4>Research Paper (POPL 2017)</h4>
+		  <p>Hazelnut is described in a research paper, <a href="https://arxiv.org/abs/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a>, which was published at POPL 2017 [<a href="./hazelnut-popl17.bib">.bib</a>]. The <a href="./hazelnut-popl17-talk.pdf">presentation slides</a> are  available (and a video should be available soon!)</p>
 
           <h4>Mechanization</h4>
-          <p>The mechanization of the metatheory of Hazelnut can be found <a href="https://github.com/hazelgrove/agda-popl17">here</a></p>
+		  <p>We have <a href="https://github.com/hazelgrove/agda-popl17">mechanized the metatheory of Hazelnut</a> using the <a href="http://wiki.portal.chalmers.se/agda/pmwiki.php">Agda</a> proof assistant.</p>
 
           <h4>Implementation</h4>
-          <p>HZ, our reference implementation of Hazelnut, can be found <a href="implementation/hz.html">here</a><BR></p>
+		  <p>HZ is a simple reference implementation of Hazelnut, written in OCaml and compiled to JavaScript using <a href="https://ocsigen.org/js_of_ocaml/">js_of_ocaml</a>.</p>
+		  <ul>
+			  <li><a href="implementation/hz.html">Play with HZ online</a></li>
+			  <li><a href="https://github.com/hazelgrove/HZ">Source code on GitHub</a></li>
+		  </ul>
         </div>
 
       </div>
 
-	  <h1>Hazel</h1>
+
 	  <div class="row marketing">
-		  <div class="col-lg-12">
-			  <h4>Vision Paper</h4>
-			  <p><a href="https://github.com/hazelgrove/hazel-vision-tr/raw/master/hazel-vision-tr.pdf">Toward Semantic Foundations for Program Editors</a></p>
+		  <div class="col-md-10">
+			  <h2>Hazelnut Live</h2>
+			  <p>We are currently working to understand how one might run the incomplete programs that Hazelnut produces, and how one might interact with these running programs.</p>
+			  <h4>Workshop Presentation</h4>
+			  An <a href="http://www.cs.cmu.edu/~iev/resources/dynamics-obt17.pdf">extended abstract</a> and <a href="http://www.cs.cmu.edu/~iev/resources/obt17-slides.pdf">annotated slides</a> for a talk on this topic given by Ian at the Off the Beaten Track (OBT) workshop at POPL 2017 are available.
 	      </div>
       </div>
-
     </div> <!-- /container -->
   <div class="container" id="team">
         <h1 class="page-header">
             Team
         </h1>
-
+		<p>If you're interested in working on Hazel, in any capacity, get in touch!</p>
         <div class="col-md-2">
                 <div class="text-center">
                 <!-- <img src="img/.jpg" class="img-responsive img-circle center-block" alt="HeadShot" id="headshot" style="width: 200px;"> -->
