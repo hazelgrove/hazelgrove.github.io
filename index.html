@@ -174,7 +174,7 @@
           When programming, we spend a substantial amount of our time working on programs
           that are not yet formally complete. For example, there may be blank spots or type errors at various locations in the program.  
           Conventional programming language definitions assign no formal meaning to these incomplete programs, so development tools have no choice but to resort to ad hoc heuristics to 
-          provide various useful language services, e.g. code completion, type inspection, code navigation, and live debugging services, without interruption.
+          provide various useful language services without interruption, e.g. code completion, type inspection, code navigation, and live programming and debugging services.
           </p>
 
           <p>
@@ -184,7 +184,7 @@
           </p>
 
           <p>
-          We are big believers in Don Syme's adage that "the best way to do technology transfer is by envy", so we are incorporating these fundamental research results into <strong>Hazel</strong>, a live functional programming environment designed from the ground up around typed holes.</p>
+          We are big believers in Don Syme's adage that "the best way to do technology transfer is by envy", so we are incorporating our research results into <strong>Hazel</strong>, a live functional programming environment designed from the ground up around typed holes.</p>
 
           <!-- 
           <p class="col-md-12">
@@ -197,7 +197,7 @@
 
           <p>The following paper describes this research vision in more detail.            <ul>
               <li>
-                <a href="https://arxiv.org/abs/1703.08694">Toward Semantic Foundations for Program Editors</a> (SNAPL 2017)
+                <a href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a> (SNAPL 2017)
               </li>
               <li>
                 <a href="./hazel-snapl17.pdf">Slides</a>
@@ -208,12 +208,12 @@
         <div class="card" id="research">
           <h2>Research Results</h2>
     <h3>Hazelnut (POPL 2017)</h3>
-      <p>To start, we developed a core calculus, <strong>Hazelnut</strong>, that establishes 1) a type system for programs with holes, and 2) a semantics of type-driven structured edit actions that insert holes automatically.</p>
+      <p>To start, we have developed a core calculus, called <strong>Hazelnut</strong>, that provides 1) a type system for expressions with holes in both expression and type position, and 2) a language of type-aware structured edit actions that insert holes automatically as necessary.</p>
           <h4>Research Paper</h4>
-      <p>Hazelnut is described in detail in a research paper published at POPL 2017.</p>
+      <p>The following research paper, published at POPL 2017, details Hazelnut.</p>
             <ul>
                 <li>
-                    <a class="major-paper" href="https://arxiv.org/abs/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a> (POPL 2017 [<a href="./hazelnut-popl17.bib">.bib</a>])
+                    <a class="major-paper" href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a> (POPL 2017 [<a href="./hazelnut-popl17.bib">.bib</a>])
                 </li>
                 <li><a href="./hazelnut-popl17-talk.pdf">Slides</a></li>
             </ul>
@@ -235,7 +235,7 @@
               <h4>Research Paper</h4>
               <p>The following research paper details how we achieve this goal by borrowing machinery from both gradual type theory and contextual modal type theory.</p>
               <ul>
-                <li><a class="major-paper" href="https://arxiv.org/abs/1805.00155">Live Functional Programming with Typed Holes</a> (in submission)</li>
+                <li><a class="major-paper" href="https://arxiv.org/pdf/1805.00155">Live Functional Programming with Typed Holes</a> (in submission)</li>
               </ul>
               <h4>Mechanization</h4>
               <p>We have <a href="https://github.com/hazelgrove/hazelnut-dynamics-agda">mechanized the metatheory of Hazelnut Live</a> using the Agda proof assistant.</p>
