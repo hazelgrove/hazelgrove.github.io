@@ -45,6 +45,14 @@
           font-weight: bold;
         }
 
+        #tagline-1 {
+          color: #e0f7c5;
+        }
+
+        #tagline-2 {
+          color: #fceac5
+        }
+
         .main-area {
           padding: 20px;
           display: grid;
@@ -97,7 +105,8 @@
 
         .date {
           color: #999;
-          font-weight: bold;
+          font-weight: normal;
+          margin-bottom: 3px;
         }
 
         a { 
@@ -132,7 +141,7 @@
           margin-bottom: 5px;
           font-weight: bold;
           font-size: 105%;
-          color: #333;
+          color: #444;
         }
 
         h4 {
@@ -168,13 +177,14 @@
           vertical-align: middle;
           position: relative;
           top: -2px;
+          margin-right: 2px;
         }
     </style>
   </head>
 
   <body>
     <div class="header">
-      <h1>Hazel <span class="tagline">is a <strong>live functional programming environment</strong> featuring <strong>typed holes</strong>.</span></h1>
+      <h1>Hazel <span class="tagline">is a <strong id="tagline-1">live functional programming environment</strong> featuring <strong id="tagline-2">typed holes</strong>.</span></h1>
     </div>
     <div class="main-area">
       <div class="left-col">
@@ -182,7 +192,7 @@
           <h2>Project Summary</h2>
           <p>
           When programming, we spend a substantial amount of our time working on programs
-          that are not yet formally complete. For example, there may be blank spots or type errors at various locations in the program.  
+          that are not yet formally complete. For example, there can be blank spots or type errors at various locations in the program.  
           Conventional programming language definitions assign no formal meaning to these incomplete programs, so development tools have no choice but to resort to ad hoc heuristics to 
           provide various useful language services without interruption, e.g. code completion, type inspection, code navigation, and live programming and debugging services.
           </p>
@@ -207,7 +217,7 @@
 
           <p>The following paper describes this research vision in more detail.            <ul>
               <li>
-                <a class="major-paper" href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a> (SNAPL 2017)
+                <a class="major-paper" href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a> (SNAPL, May 2017)
               </li>
               <li>
                 <a href="./hazel-snapl17.pdf">Slides</a>
@@ -223,7 +233,7 @@
       <p>The following research paper, published at POPL 2017, details Hazelnut.</p>
             <ul>
                 <li>
-                    <a class="major-paper" href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a> (POPL 2017 [<a href="./hazelnut-popl17.bib">.bib</a>])
+                    <a class="major-paper" href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a> (POPL, Jan. 2017 [<a href="./hazelnut-popl17.bib">.bib</a>])
                 </li>
                 <li><a href="./hazelnut-popl17-talk.pdf">Slides</a></li>
             </ul>
@@ -245,7 +255,7 @@
               <h4>Research Paper</h4>
               <p>The following research paper details how we achieve this goal by borrowing machinery from both gradual type theory and contextual modal type theory.</p>
               <ul>
-                <li><a class="major-paper" href="https://arxiv.org/pdf/1805.00155">Live Functional Programming with Typed Holes</a> (in submission)</li>
+                <li><a class="major-paper" href="https://arxiv.org/pdf/1805.00155">Live Functional Programming with Typed Holes</a> (draft paper, April 2018)</li>
               </ul>
               <h4>Mechanization</h4>
               <p>We have <a href="https://github.com/hazelgrove/hazelnut-dynamics-agda">mechanized the metatheory of Hazelnut Live</a> using the Agda proof assistant.</p>
@@ -254,8 +264,8 @@
               <h4>LIVE 2017 Presentation</h4>
               <p>Cyrus presented some of this work at the <a href="https://2017.splashcon.org/track/live-2017#About">LIVE 2017</a> workshop.</p>
               <ul>
-                <li><a href="hazelnut-dynamics-LIVE2017.pdf">Toward a Live Stepper for Typed Expressions with Holes</a> (Extended Abstract, LIVE 2017)</li>
-        <li><a href="live-2017.pdf">Slides</a></li>
+                <li><a href="./hazelnut-dynamics-LIVE2017.pdf">Toward a Live Stepper for Typed Expressions with Holes</a> (Extended Abstract, LIVE 2017)</li>
+        <li><a href="./live-2017.pdf">Slides</a></li>
               </ul>
         <h4>OBT 2017 Presentation</h4>
         Ian presented a much earlier take on this work at the Off the Beaten Track (OBT) workshop at POPL 2017. 
@@ -272,7 +282,7 @@
           <div class="ideas">
             <div class="idea">
               <h4>Collaborative Editing</h4>
-              <p>We are thinking about how to specify an edit action semantics that obeys the invariants necessary to make a Hazelnut program a conflict-free replicated data structure (CRDT).</p>
+              <p>We are thinking about how to specify an edit action semantics that obeys the invariants necessary to make a Hazelnut program a <a href="http://christophermeiklejohn.com/crdt/2014/07/22/readings-in-crdts.html">conflict-free replicated data type (CRDT)</a>.</p>
             </div>
             <div class="idea">
               <h4>Programming by Direct Manipulation of GUIs with Typed Holes</h4>
@@ -300,27 +310,6 @@
           <a href="https://github.com/hazelgrove/hazel"><img width="20" height="20" src="imgs/GitHub/GitHub-Mark/PNG/GitHub-Mark-32px.png"> Source code on GitHub</a> <!-- (<a href="https://reasonml.github.io/">Reason</a>/<a href="http://ocaml.org/">OCaml</a> + <a href="https://coq.inria.fr/">Coq</a>, compiled using <a href="https://ocsigen.org/js_of_ocaml/">js_of_ocaml</a>) -->
           </p>
         </div>
-        <!-- <div class="card" id="news">
-          <h2>News</h2>
-          <div class="news-list">
-            <div class="news-item">
-              <div class="date">April 2018</div>
-              <div class="news-text"><a href="li">Draft paper about live programming</a> available!</div>
-            </div>
-            <div class="news-item">
-              <div class="date">January 2018</div>
-              <div class="news-text">Cursor movement in Hazel is now textual!</div>
-            </div>
-            <div class="news-item">
-              <div class="date">Oct 2017</div>
-              <div class="news-text">Cyrus gave a talk at LIVE 2017</div>
-            </div>
-            <div class="news-item">
-              <div class="date">Sep 2017</div>
-              <div class="news-text">Cyrus moved from CMU to UChicago to start a post-doc with Ravi!</div>
-            </div>
-          </div>
-        </div> -->
         <div class="card" id="contributors">
           <h2>Contributors</h2>
     <ul class="contributor-list">
@@ -330,17 +319,47 @@
       <li><a href="http://people.cs.uchicago.edu/~rchugh/">Ravi Chugh</a>, UChicago</li>
 
       <li><a href="http://www.cs.cmu.edu/~mhilton/">Michael Hilton</a>, CMU</li> 
-      <li><a href="https://www.cs.cmu.edu/~aldrich/">Jonathan Aldrich</a>, CMU</li>
 
       <li><a href="https://github.com/bkase">Brandon Kase</a></li>
       <li><a href="https://github.com/nickcollins">Nick Collins</a>, UChicago</li>
     </ul>
-    <p>We are grateful for the <i>pro bono</i> artistic services
-    provided by <a href="http://modgethanc.com/">Vincent Zeng</a>.</p>
+                    If you're interested in working on Hazel, in any capacity, get in touch!
 
-                    <div>If you're interested in working on Hazel, in any capacity, get in touch!</div>
-                              <script type="text/javascript" src="js/jseyes.js"></script>
-        <div style="text-align: center; margin-top: 10px">
+        </div>
+
+        <div class="card" id="news">
+          <h2>News</h2>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="date">April 2018</div>
+              <div class="news-text">A <a href="li">draft paper on live programming</a> is available</div>
+            </div>
+            <div class="news-item">
+              <div class="date">January 2018</div>
+              <div class="news-text">Cursor movement in Hazel is now textual!</div>
+            </div>
+            <div class="news-item">
+              <div class="date">Oct 2017</div>
+              <div class="news-text">Cyrus gave <a href="./live-2017.pdf">a talk</a> about live programming in Hazel at the <a href="https://2017.splashcon.org/track/live-2017#About">LIVE workshop</a> at <a href="https://2017.splashcon.org">SPLASH</a></div>
+            </div>
+            <div class="news-item">
+              <div class="date">Sep 2017</div>
+              <div class="news-text">Cyrus moved from CMU to UChicago to start a postdoc with Ravi</div>
+            </div>
+            <div class="news-item">
+              <div class="date">May 2017</div>
+              <div class="news-text">Cyrus and Matthew attended <a href="http://snapl.org">SNAPL</a> and <a href="./hazel-snapl17.pdf">talked</a> about <a href="https://arxiv.org/pdf/1703.08694">the vision for the Hazel project</a></div>
+            </div>
+            <div class="news-item">
+              <div class="date">Jan 2017</div>
+              <div class="news-text">Cyrus <a href="./hazelnut-popl17-talk.pdf">presented</a> the <a href="https://arxiv.org/pdf/1607.04180">Hazelnut paper</a> at <a href="http://popl17.sigplan.org/program/program-POPL-2017">POPL</a></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="" id="hazel-eyes">
+        <script type="text/javascript" src="js/jseyes.js"></script>
+        <div style="text-align: center; position: relative; left: +90px; top: +20px">
           <script type="text/javascript">
             myeyes= new jseyes();
             myeyes.main.img="imgs/hazel-logo.png";
@@ -349,6 +368,7 @@
             myeyes.write();
           </script>
         </div>
+        <p style="font-size: 7pt; opacity: 1; color: #888; text-align: center; position: relative; top: +30px; left: -5px">(h/t <a href="http://modgethanc.com/">Vincent Zeng</a>)</p>
         </div>
       </div>
     </div>
