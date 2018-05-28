@@ -225,9 +225,8 @@
             </ul>
           </p>
         </div>
-        <div class="card" id="research">
-          <h2>Research Results</h2>
-    <h3>Hazelnut (POPL 2017)</h3>
+        <div class="card" id="hazelnut-popl17">
+          <h2>Research Result: Hazelnut (POPL 2017)</h2>
       <p>To start, we have developed a core calculus, called <strong>Hazelnut</strong>, that provides 1) a type system for expressions with holes in both expression and type position, and 2) a language of type-aware structured edit actions that insert holes automatically.</p>
           <h4>Research Paper</h4>
       <p>The following research paper, published at POPL 2017, details Hazelnut.</p>
@@ -247,9 +246,9 @@
         <li><a href="HZ/hz.html">Play with HZ online</a></li>
         <li><a href="https://github.com/hazelgrove/HZ">Source code on GitHub</a></li>
       </ul>
-
-
-        <h3>Hazelnut Live (Draft Paper)</h3>
+    </div>
+    <div class="card" id="hazelnut-live">
+        <h2>Draft Paper: Hazelnut Live</h2>
         <p>  
         We are now working to understand, from type-theoretic first principles, how we might evaluate the programs with holes that Hazelnut produces (without simply stopping at the first hole), and how we might granularly interleave editing with evaluation (i.e. live programming). The goal is for us to be able to provide both static and dynamic feedback to the programmer about <em>every possible editor state</em> in Hazel.</p>
               <h4>Research Paper</h4>
@@ -357,9 +356,10 @@
           </div>
         </div>
         
-        <div class="" id="hazel-eyes">
+        <div class="" id="hazel-eyes" style="display: flex; justify-content: center;
+        flex-direction: column; margin-top: 30px">
         <script type="text/javascript" src="js/jseyes.js"></script>
-        <div style="text-align: center; position: relative; left: +90px; top: +20px">
+        <div style="display: flex; justify-content: center;">
           <script type="text/javascript">
             myeyes= new jseyes();
             myeyes.main.img="imgs/hazel-logo.png";
@@ -368,7 +368,9 @@
             myeyes.write();
           </script>
         </div>
-        <p style="font-size: 7pt; opacity: 1; color: #888; text-align: center; position: relative; top: +30px; left: -5px">(h/t <a href="http://modgethanc.com/">Vincent Zeng</a>)</p>
+        <div>
+        <p style="font-size: 7pt; opacity: 1; color: #888; text-align: center; margin-top: 15px">(h/t <a href="http://modgethanc.com/">Vincent Zeng</a>)</p>
+        </div>
         </div>
       </div>
     </div>
