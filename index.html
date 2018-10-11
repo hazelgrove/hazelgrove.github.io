@@ -208,7 +208,7 @@
           When programming, we spend a substantial amount of our time working with programs
           that are not yet complete &mdash; there can be blank spots, type errors or merge conflicts at multiple locations in the program.  
           Conventional programming language definitions assign no formal meaning to incomplete programs like these, so development tools have no choice but to resort to complex and ad hoc heuristics to 
-          provide various useful language services without interruption, like code completion, type inspection, code navigation, and live programming and debugging services.
+          provide various useful language services without gaps, like code completion, type inspection, code navigation, and live programming and debugging services.
           </p>
 
           <p>
@@ -218,9 +218,10 @@
           </p>
 
           <p>
-          This approach is broadly relevant, but we are incorporating our results into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>-like functional language that is being designed from the ground up to explore typed hole-driven development. Uniquely, every editor state that you can reach using Hazel's language of edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
-          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel is a great platform for designing the next generation of editor services.
-          </p>
+          This hole-oriented approach is broadly relevant, but we are incorporating our results into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>-like functional language that is being designed from the ground around typed hole-driven development.</p>
+          
+          <p>Uniquely, every incomplete program that you can construct using Hazel's language of edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
+          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel solves the gap problem: language services never flicker out or go stale, nor do they need to resort to  heuristics to handle meaningless editor states.</p>
           
           <!-- <p>
           The <a href="./hazel/hazel.html">Hazel implementation</a> is a work-in-progress. As Hazel evolves, we plan to apply it first to teach introductory functional programming courses. As it evolves further, we plan to use Hazel to do data anlysis, music and visual art. One day, we plan for Hazel to serve as the foundation of a new kind of computational wiki.</p>
@@ -244,7 +245,7 @@
         </div>
         <div class="card" id="hazelnut-popl17">
           <h2>Hazelnut (POPL 2017)</h2>
-      <p>To start, we developed a core calculus, called <strong>Hazelnut</strong>, that defines 1) a type system for expressions with holes in both expression and type position, and 2) a language of type-aware structured edit actions that insert holes automatically.</p>
+      <p>To start, we developed a core calculus called <strong>Hazelnut</strong> that defines 1) a type system for expressions with holes in both expression and type position, and 2) a language of type-aware structured edit actions that insert holes automatically.</p>
       <p>The following research paper, published at POPL 2017, details Hazelnut.</p>
       <div class="paper">
         <a class="major-paper" href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a><br />
@@ -267,9 +268,10 @@
     <div class="card" id="hazelnut-live">
         <h2>Hazelnut Live (to appear, POPL 2019)</h2>
         <p>  
-        How do we run programs with holes? One approach is to simply stop when we encounter a hole at run-time. This paper explores a more sophisticated approach: we continue evaluation as far as possible, producing a result with holes. Furthermore, we track closures around each hole instance, which allows Hazel to provide detailed live feedback to the programmer without gaps. It also allows us to resume evaluate after hole filling, rather than restarting from scratch.
+        Next, we wondered: how can we run programs with holes? 
+       One approach is to simply stop as soon as we encounter a hole at run-time, but this isn't very informative. Our next paper develops a more informative approach: we continue evaluation as far as possible, producing a result containing hole closures. Hole closures allow Hazel to provide detailed live feedback to the programmer, and to resume evaluation from where it left off once a hole is filled.
         </p>
-        <p>The following research paper details how we achieve this by borrowing machinery from gradual type theory and contextual modal type theory. The resulting core calculus is called <strong>Hazelnut Live</strong>.</p>
+        <p>The following research paper details how we achieve this by adapting machinery from gradual type theory and contextual modal type theory. The resulting core calculus is called <strong>Hazelnut Live</strong>.</p>
               <div class="paper">
                 <a class="major-paper" href="https://arxiv.org/pdf/1805.00155">Live Functional Programming with Typed Holes</a> (draft, July 2018)<br />
                 C. Omar, I. Voysey, R. Chugh and M. Hammer<br />
@@ -351,7 +353,7 @@
           <div class="news-list">
             <div class="news-item">
               <div class="date">Oct 2018</div>
-              <div class="news-text">Our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a> was accepted at <a href="https://popl19.sigplan.org/home">POPL 2019</a>!</div>
+              <div class="news-text"><a href="https://popl19.sigplan.org/home">POPL 2019</a> accepted our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a>!</div>
             </div>
             <div class="news-item">
               <div class="date">May 2018</div>
@@ -363,11 +365,11 @@
             </div> -->
             <div class="news-item">
               <div class="date">May 2017</div>
-              <div class="news-text">Our <a href="https://arxiv.org/pdf/1703.08694">vision paper</a> was presented at <a href="http://snapl.org">SNAPL 2017</a>.</div>
+              <div class="news-text"><a href="http://snapl.org">SNAPL 2017</a> accepted our <a href="https://arxiv.org/pdf/1703.08694">vision paper</a>.</div>
             </div>
             <div class="news-item">
               <div class="date">Jan 2017</div>
-              <div class="news-text">Our <a href="https://arxiv.org/pdf/1607.04180">Hazelnut paper</a> was presented at <a href="http://popl17.sigplan.org/program/program-POPL-2017">POPL 2017</a>.</div>
+              <div class="news-text"><a href="http://popl17.sigplan.org/program/program-POPL-2017">POPL 2017</a> accepted our <a href="https://arxiv.org/pdf/1607.04180">Hazelnut paper</a>.</div>
             </div>
           </div>
         </div>
