@@ -208,7 +208,7 @@
           When programming, we spend a substantial amount of our time working with programs
           that are not yet complete &mdash; there can be blank spots, type errors or merge conflicts at multiple locations in the program.  
           Conventional programming language definitions assign no formal meaning to incomplete programs like these, so development tools have no choice but to resort to complex and ad hoc heuristics to 
-          provide various useful language services without gaps, like code completion, type inspection, code navigation, and live programming and debugging services.
+          provide various useful language services (like code completion, type inspection, code navigation, and live programming services) without gaps in service.
           </p>
 
           <p>
@@ -221,7 +221,7 @@
           This hole-oriented approach is broadly relevant, but we are incorporating our results into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>-like functional language that is being designed from the ground around typed hole-driven development.</p>
           
           <p>Uniquely, every incomplete program that you can construct using Hazel's language of edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
-          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel solves the gap problem: language services never flicker out or go stale, nor do they need to resort to  heuristics to handle meaningless editor states.</p>
+          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel solves the gap problem: language services never flicker out or go stale, nor do they need to resort to  heuristics. Hazel therefore serves as an elegant platform for research on the future of programming!</p>
           
           <!-- <p>
           The <a href="./hazel/hazel.html">Hazel implementation</a> is a work-in-progress. As Hazel evolves, we plan to apply it first to teach introductory functional programming courses. As it evolves further, we plan to use Hazel to do data anlysis, music and visual art. One day, we plan for Hazel to serve as the foundation of a new kind of computational wiki.</p>
@@ -235,7 +235,7 @@
           </p>
           -->
 
-          <p>The following paper describes this research vision in more detail.            
+          <p>The following paper describes our research vision in more detail.            
             <div class="paper">
               <a class="major-paper" href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a><br />
               <strong>SNAPL 2017</strong> [<a href="./hazel.bib">.bib</a>]
@@ -278,7 +278,7 @@
                 <strong>POPL 2019</strong> (to appear, Jan 2019)
               </div>
               <br />
-              <div>We are <a href="https://github.com/hazelgrove/hazelnut-dynamics-agda">mechanizing the metatheory of Hazelnut Live</a> using the <a href="http://wiki.portal.chalmers.se/agda/pmwiki.php">Agda</a> proof assistant.</div>
+              <div>We have <a href="https://github.com/hazelgrove/hazelnut-dynamics-agda">mechanized the metatheory of Hazelnut Live</a> using the <a href="http://wiki.portal.chalmers.se/agda/pmwiki.php">Agda</a> proof assistant.</div>
               <!--<h4>LIVE 2017 Presentation</h4>
               <p>Cyrus presented some of this work at the <a href="https://2017.splashcon.org/track/live-2017#About">LIVE 2017</a> workshop.</p>
               <ul>
@@ -299,16 +299,16 @@
           <p>We have a number of ideas incubating &mdash; if you're interested in any of these, definitely get in touch. We would also love to hear about other ideas you might have.</p>
           <div class="ideas">
             <div class="idea">
-              <h4>Collaborative Editing</h4>
-              <p>We are thinking about how to specify an edit action semantics that obeys the invariants necessary to make a Hazelnut program a <a href="http://christophermeiklejohn.com/crdt/2014/07/22/readings-in-crdts.html">convergent replicated data type (CRDT)</a>.</p>
-            </div>
-            <div class="idea">
-              <h4>Programming by Direct Manipulation of GUIs with Typed Holes</h4>
+              <h4>Live and Direct Functional Programming with Palette Expressions</h4>
               <p>We are thinking about how to integrate GUIs directly into Hazel expressions, and how to integrate Hazel expressions directly into GUIs.</p>
             </div>
             <div class="idea">
+              <h4>Collaborative Editing with CRDTs</h4>
+              <p>We are thinking about how to specify an edit action semantics that obeys the invariants necessary to make a Hazelnut program a <a href="http://christophermeiklejohn.com/crdt/2014/07/22/readings-in-crdts.html">convergent replicated data type (CRDT)</a>.</p>
+            </div>
+            <div class="idea">
               <h4>Edit-Time Macros</h4>
-              <p>We are thinking about how to use Hazel to programmatically control Hazel.</p>
+              <p>We are thinking about how to use Hazel to define higher-level semantics-aware edit actions.</p>
             </div>
             <div class="idea">
               <h4>Edit Action Synthesis and Suggestion</h4>
@@ -357,7 +357,7 @@
             </div>
             <div class="news-item">
               <div class="date">May 2018</div>
-              <div class="news-text">NSF selected the research that Cyrus, Ravi and Matthew proposed for three years of funding!<!-- [<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1814900">1</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1817145">2</a>]--></div>
+              <div class="news-text">NSF [<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1814900">1</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1817145">2</a>] selected the proposal that Cyrus, Ravi and Matthew wrote for three years of funding!<!-- --></div>
             </div>
             <!-- <div class="news-item">
               <div class="date">Jan 2018</div>
@@ -386,8 +386,8 @@
               <div class="news-text">Cyrus will give a talk on <a href="https://github.com/hazelgrove/LIVE2018/raw/master/hazel-live-2018-submission.pdf">live and direct programming in Hazel</a> at the <a href="https://2018.splashcon.org/track/live-2018-papers#program">LIVE</a> workshop at <a href="http://www.splashcon.org/">SPLASH</a> in Boston.</div>
             </div>
             <div class="news-item">
-              <div class="date">Oct 2018 (upcoming)</div>
-              <div class="news-text">Cyrus will give a talk on Hazel at the <a href="http://pages.cs.wisc.edu/~loris/midwest-pl-summit18/index.html">Midwest PL Summit</a> in Madison.</div>
+              <div class="date">Oct 2018</div>
+              <div class="news-text">Cyrus gave a talk on Hazel at the <a href="http://pages.cs.wisc.edu/~loris/midwest-pl-summit18/index.html">Midwest PL Summit</a> in Madison.</div>
             </div>
             <div class="news-item">
               <div class="date">Sep 2018</div>
