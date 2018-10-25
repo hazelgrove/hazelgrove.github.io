@@ -220,8 +220,8 @@
           <p>
           This hole-oriented approach is broadly relevant, but we are incorporating our results into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>-like functional language that is being designed from the ground around typed hole-driven development.</p>
           
-          <p>Uniquely, every incomplete program that you can construct using Hazel's language of edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
-          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel solves the gap problem: language services never flicker out or go stale, nor do they need to resort to  heuristics. Hazel therefore serves as an elegant platform for research on the future of programming!</p>
+          <p>Uniquely, every incomplete program that you can construct using Hazel's language of type-aware edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
+          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel solves the gap problem: language services never flicker out or go stale, nor do they need to resort to  heuristics. Hazel therefore serves as an elegant platform for research on the future of programming.</p>
           
           <!-- <p>
           The <a href="./hazel/hazel.html">Hazel implementation</a> is a work-in-progress. As Hazel evolves, we plan to apply it first to teach introductory functional programming courses. As it evolves further, we plan to use Hazel to do data anlysis, music and visual art. One day, we plan for Hazel to serve as the foundation of a new kind of computational wiki.</p>
@@ -245,8 +245,8 @@
         </div>
         <div class="card" id="hazelnut-popl17">
           <h2>Hazelnut (POPL 2017)</h2>
-      <p>To start, we developed a core calculus called <strong>Hazelnut</strong> that defines 1) a type system for expressions with holes in both expression and type position, and 2) a language of type-aware structured edit actions that insert holes automatically.</p>
-      <p>The following research paper, published at POPL 2017, details Hazelnut.</p>
+      <p>To start, we developed a core calculus, <strong>Hazelnut</strong>, that contributes (1) a static semantics (i.e. type system) for expressions with holes in both expression and type position, and (2) a language of edit actions that insert holes automatically to ensure that every edit state has static meaning.</p>
+      <p>The following research paper details Hazelnut.</p>
       <div class="paper">
         <a class="major-paper" href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a><br />
         C. Omar, I. Voysey, M. Hilton, J. Aldrich and M. Hammer<br /> 
@@ -268,10 +268,9 @@
     <div class="card" id="hazelnut-live">
         <h2>Hazelnut Live (to appear, POPL 2019)</h2>
         <p>  
-        Next, we wondered: how can we run programs with holes? 
-       One approach is to simply stop as soon as we encounter a hole at run-time, but this isn't very informative. Our next paper develops a more informative approach: we continue evaluation as far as possible, producing a result containing hole closures. Hole closures allow Hazel to provide detailed live feedback to the programmer, and to resume evaluation from where it left off once a hole is filled.
+        Next, we developed <strong>Hazelnut Live</strong>, which contributes a dynamic semantics for expressions with holes in both expression and type position. Rather than stopping as soon as we encounter a hole at run-time,  we continue evaluation as far as possible, producing a result containing hole closures.  Hole closures allow us to continuously provide granular live feedback to the programmer, and to resume evaluation once a hole is filled.
         </p>
-        <p>The following research paper details how we achieve this by adapting machinery from gradual type theory and contextual modal type theory. The resulting core calculus is called <strong>Hazelnut Live</strong>.</p>
+        <p>The following research paper details how we achieve this by adapting machinery from gradual type theory and contextual modal type theory. 
               <div class="paper">
                 <a class="major-paper" href="https://arxiv.org/pdf/1805.00155">Live Functional Programming with Typed Holes</a> (draft, July 2018)<br />
                 C. Omar, I. Voysey, R. Chugh and M. Hammer<br />
@@ -300,7 +299,7 @@
           <div class="ideas">
             <div class="idea">
               <h4>Live and Direct Functional Programming with Palette Expressions</h4>
-              <p>We are thinking about how to integrate GUIs directly into Hazel expressions, and how to integrate Hazel expressions directly into GUIs.</p>
+              <p>We are thinking about how to integrate user-defined GUIs directly into Hazel expressions, and how to integrate Hazel expressions directly into user-defined GUIs.</p>
             </div>
             <div class="idea">
               <h4>Collaborative Editing with CRDTs</h4>
@@ -312,11 +311,11 @@
             </div>
             <div class="idea">
               <h4>Edit Action Synthesis and Suggestion</h4>
-              <p>We are thinking about how to suggest useful edit action suggestions for the programmer, using both semantic constraints and machine learning.</p>
+              <p>We are thinking about how to suggest useful edit actions to the programmer by feeding the semantic data that Hazel makes available into program synthesis and machine learning algorithms.</p>
             </div>
             <div class="idea">
               <h4>Applications</h4>
-              <p>As Hazel evolves, we plan to apply it first to teach introductory functional programming courses, and later on we plan to use Hazel to do data analysis, music and visual art. One day, we hope that Hazel will be the foundation for a new kind of programmable wiki.</p>
+              <p>As Hazel evolves, we plan to apply it first to teach introductory functional programming courses, and later on we plan to use Hazel to do data analysis (think a next-generation <a href="http://jupyter.org/">Jupyter</a>), music and visual art. One day, we hope that Hazel will be the foundation for a new kind of computational wiki.</p>
             </div>
           </div>
         </div>
@@ -353,11 +352,15 @@
           <div class="news-list">
             <div class="news-item">
               <div class="date">Oct 2018</div>
-              <div class="news-text"><a href="https://popl19.sigplan.org/home">POPL 2019</a> accepted our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a>!</div>
+              <div class="news-text"><a href="https://popl19.sigplan.org/home">POPL 2019</a> accepted our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a>.</div>
+            </div>
+            <div class="news-item">
+              <div class="date">Sep 2018</div>
+              <div class="news-text"><a href="http://www.thestrangeloop.com">Strange Loop</a> hosted <a href="https://www.thestrangeloop.com/2018/hazel-a-live-functional-programming-environment-with-typed-holes.html">a presentation on Hazel</a>.</div>
             </div>
             <div class="news-item">
               <div class="date">May 2018</div>
-              <div class="news-text">NSF [<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1814900">1</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1817145">2</a>] selected the proposal that Cyrus, Ravi and Matthew wrote for three years of funding!<!-- --></div>
+              <div class="news-text"><a href="https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Semantic+Foundations+for+Hole-Driven+Development%22">NSF</a> selected the research that Cyrus, Ravi and Matthew proposed for three years of funding.</div>
             </div>
             <!-- <div class="news-item">
               <div class="date">Jan 2018</div>
@@ -375,7 +378,7 @@
         </div>
         
         <div class="card" id="talks">
-          <h2>Talk Schedule</h2>
+          <h2>Recent &amp; Upcoming Talks</h2>
           <div class="news-list">
             <div class="news-item">
               <div class="date">Jan 2019 (upcoming)</div>
@@ -383,15 +386,15 @@
             </div>
             <div class="news-item">
               <div class="date">Nov 2018 (upcoming)</div>
-              <div class="news-text">Cyrus will give a talk on <a href="https://github.com/hazelgrove/LIVE2018/raw/master/hazel-live-2018-submission.pdf">live and direct programming in Hazel</a> at the <a href="https://2018.splashcon.org/track/live-2018-papers#program">LIVE</a> workshop at <a href="http://www.splashcon.org/">SPLASH</a> in Boston.</div>
+              <div class="news-text">Cyrus will <a href="https://github.com/hazelgrove/LIVE2018/raw/master/hazel-live-2018-submission.pdf">present Hazel</a> at the <a href="https://2018.splashcon.org/track/live-2018-papers#program">LIVE</a> workshop at <a href="http://www.splashcon.org/">SPLASH</a> in Boston.</div>
             </div>
             <div class="news-item">
               <div class="date">Oct 2018</div>
-              <div class="news-text">Cyrus gave a talk on Hazel at the <a href="http://pages.cs.wisc.edu/~loris/midwest-pl-summit18/index.html">Midwest PL Summit</a> in Madison.</div>
+              <div class="news-text">Cyrus presented Hazel at the <a href="http://pages.cs.wisc.edu/~loris/midwest-pl-summit18/index.html">Midwest PL Summit</a> in Madison.</div>
             </div>
             <div class="news-item">
               <div class="date">Sep 2018</div>
-              <div class="news-text">Cyrus gave a <a href="https://www.thestrangeloop.com/2018/hazel-a-live-functional-programming-environment-with-typed-holes.html">talk on Hazel</a> at <a href="http://www.thestrangeloop">Strange Loop</a> in St. Louis.</div>
+              <div class="news-text">Cyrus <a href="https://www.thestrangeloop.com/2018/hazel-a-live-functional-programming-environment-with-typed-holes.html">presented Hazel</a> at <a href="http://www.thestrangeloop.com">Strange Loop</a> in St. Louis.</div>
             </div>
             <!-- <div class="news-item">
               <div class="date">Oct 2017</div>
