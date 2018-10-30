@@ -205,23 +205,23 @@
         <div class="card" id="about">
           <h2>Project Summary</h2>
           <p>
-          When programming, we spend a substantial amount of our time working with programs
-          that are not yet complete &mdash; there can be blank spots, type errors or merge conflicts at multiple locations in the program.  
-          Conventional programming language definitions assign no formal meaning to incomplete programs like these, so development tools have no choice but to resort to complex and ad hoc heuristics to 
+          When programming, we spend a substantial amount of our time working with program text 
+          that is not yet a formally complete program, e.g. because there are blank spots, type errors or merge conflicts at various locations.  
+          Conventional programming language definitions assign no formal meaning to structures like these, so program editors and other tools have no choice but to resort to complex and ad hoc heuristics to 
           provide various useful language services (like code completion, type inspection, code navigation, and live programming services) without gaps in service.
           </p>
 
           <p>
-          We are developing a more principled approach to working with incomplete programs, rooted in the first principles of type theory.
+          We are developing a more principled approach to working with incomplete programs, rooted in (contextual modal and gradual) type theory.
           We model incomplete programs as programs with <em>holes</em>, which (1) stand for parts of the program that are missing; and (2) serve as membranes
           around parts of the program that are erroneous or, in the collaborative setting, conflicted. 
           </p>
 
           <p>
-          This hole-oriented approach is broadly relevant, but we are incorporating our results into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>-like functional language that is being designed from the ground around typed hole-driven development.</p>
+          This hole-oriented approach is broadly relevant, but we are incorporating our results into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>/ML-like functional language that is being designed from the ground up around typed hole-driven development.</p>
           
           <p>Uniquely, every incomplete program that you can construct using Hazel's language of type-aware edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
-          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel solves the gap problem: language services never flicker out or go stale, nor do they need to resort to  heuristics. Hazel therefore serves as an elegant platform for research on the future of programming.</p>
+          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel serves as an elegant platform for research on the future of programming.</p>
           
           <!-- <p>
           The <a href="./hazel/hazel.html">Hazel implementation</a> is a work-in-progress. As Hazel evolves, we plan to apply it first to teach introductory functional programming courses. As it evolves further, we plan to use Hazel to do data anlysis, music and visual art. One day, we plan for Hazel to serve as the foundation of a new kind of computational wiki.</p>
@@ -330,7 +330,7 @@
         <div class="card" id="contributors">
           <h2>Contributors</h2>
     <ul class="contributor-list">
-      <li><a href="http://www.cs.cmu.edu/~comar/">Cyrus Omar</a>, UChicago</li>
+      <li><a href="https://people.cs.uchicago.edu/~comar/">Cyrus Omar</a>, UChicago</li>
       <li><a href="http://www.cs.cmu.edu/~iev/">Ian Voysey</a>, CMU</li>
       <li><a href="https://github.com/nickcollins">Nick Collins</a>, UChicago</li>
       <li><a href="http://people.cs.uchicago.edu/~rchugh/">Ravi Chugh</a>, UChicago</li>
@@ -385,8 +385,12 @@
               <div class="news-text">Cyrus will present our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a> at <a href="https://popl19.sigplan.org/home">POPL 2019</a> in Lisbon.</div>
             </div>
             <div class="news-item">
-              <div class="date">Nov 2018 (upcoming)</div>
+              <div class="date">Nov 6, 2018 (upcoming)</div>
               <div class="news-text">Cyrus will <a href="https://github.com/hazelgrove/LIVE2018/raw/master/hazel-live-2018-submission.pdf">present Hazel</a> at the <a href="https://2018.splashcon.org/track/live-2018-papers#program">LIVE</a> workshop at <a href="http://www.splashcon.org/">SPLASH</a> in Boston.</div>
+            </div>
+            <div class="news-item">
+              <div class="date">Oct 31, 2018</div>
+              <div class="news-text">Cyrus will give a <a href="https://www.cs.cmu.edu/Groups/pop/index.html">POP seminar</a>  at CMU.</div>
             </div>
             <div class="news-item">
               <div class="date">Oct 2018</div>
