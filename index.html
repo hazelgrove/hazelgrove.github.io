@@ -218,7 +218,7 @@
           </p>
 
           <p>
-          This hole-oriented approach is broadly relevant, but we are incorporating our results into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>/ML-like functional language that is being designed from the ground up around typed hole-driven development.</p>
+          We are implementing these ideas into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>/ML-like functional programming language being designed from the ground up around typed hole-driven development.</p>
           
           <p>Uniquely, every incomplete program that you can construct using Hazel's language of type-aware edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
           a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel serves as an elegant platform for research on the future of programming.</p>
@@ -299,9 +299,15 @@
           <div class="ideas">
             <div class="idea">
               <h4>
-                Programming by Direct Manipulation of Live Palette Expressions
+                Flexible Structure Editing of Well-Typed Expressions
               </h4>
-              <p>We are working on allowing programmers to fill holes by direct manipulation of live GUIs with holes.</p>
+              <p>We are working on a <a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">keyboard-driven editing experience</a> that builds on your intuitions from text editing and that supports complex code reorganization patterns. We will do user studies.</p>
+            </div>
+            <div class="idea">
+              <h4>
+                Livelits: Filling Typed Holes with Live GUIs
+              </h4>
+              <p>We are working on allowing programmers to <a href="https://github.com/hazelgrove/livelits-tyde/blob/master/livelits-tyde.pdf">fill holes by direct manipulation</a> of live GUIs with holes.</p>
             </div>
             <div class="idea">
               <h4>Collaborative Editing with CRDTs</h4>
@@ -313,7 +319,7 @@
             </div>
             <div class="idea">
               <h4>Applications</h4>
-              <p>As Hazel evolves, we plan to apply it first to teach introductory functional programming courses, and later on we plan to use Hazel to do data analysis (think a next-generation <a href="http://jupyter.org/">Jupyter</a>). One day, we hope that Hazel will be the foundation for a new kind of computational wiki.</p>
+              <p>As Hazel evolves, we plan to apply it first to teach introductory functional programming, and later on we plan to use Hazel to support data analysis (think a next-generation <a href="http://jupyter.org/">Jupyter</a>). One day, we hope that Hazel will be the foundation for a new kind of computational wiki.</p>
             </div>
           </div>
         </div>
@@ -326,18 +332,21 @@
           </p>
         </div>
         <div class="card" id="contributors">
-          <h2>Contributors</h2>
+          <h2>Team Hazel</h2>
     <ul class="contributor-list">
       <li><a href="https://people.cs.uchicago.edu/~comar/">Cyrus Omar</a>, University of Chicago</li>
-      <li><a href="http://www.cs.cmu.edu/~iev/">Ian Voysey</a>, Carnegie Mellon University</li>
       <li><a href="https://plv.colorado.edu/dmoon">David Moon</a>, University of Colorado Boulder</li>
+      <li><a href="http://www.cs.cmu.edu/~iev/">Ian Voysey</a>, Carnegie Mellon University</li>
       <li><a href="https://github.com/nickcollins">Nick Collins</a>, University of Chicago</li>
+      <li><a href="https://github.com/charlesetc">Charles Chamberlain</a>, University of Chicago</li>
       <li><a href="http://people.cs.uchicago.edu/~rchugh/">Ravi Chugh</a>, University of Chicago</li>
-      <li><a href="http://matthewhammer.org/">Matthew A. Hammer</a></li>
-      <li><a href="https://github.com/bkase">Brandon Kase</a></li>
+      <li><a href="http://benshapi.ro/">Ben Shapiro</a>, University of Colorado Boulder</li> 
       <li><a href="https://github.com/nmsmith">Nick Smith</a></li>
+      <li><a href="https://www.xuanruiqi.com/">Xuanrui (Ray) Qi</a></li>
+      <!--<li><a href="http://matthewhammer.org/">Matthew A. Hammer</a></li>
+      <li><a href="https://github.com/bkase">Brandon Kase</a></li>-->
     </ul>
-    <p>If you are interested in working on Hazel, in any capacity, or want a mentor to help you learn the necessary type theory, get in touch! </p>
+    <p>If you are interested in working on Hazel, in any capacity, or you're looking for a mentor to help you learn the necessary type theory, or you just want to join the discussion on Slack, get in touch! </p>
         </div>
 
         <!-- <div class="card" id="funding">
@@ -349,6 +358,10 @@
         <div class="card" id="news">
           <h2>News</h2>
           <div class="news-list">
+            <div class="news-item">
+              <div class="date">Sep 2019</div>
+              <div class="news-text"><a href="https://people.cs.uchicago.edu/~comar/">Cyrus</a> will start as an Assistant Professor at the University of Michigan in the Fall.</div>
+            </div>
             <div class="news-item">
               <div class="date">Jan 2019</div>
               <div class="news-text"><a href="https://popl19.sigplan.org/home">POPL 2019</a> published our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a>.</div>
@@ -380,7 +393,11 @@
           <h2>Recent &amp; Upcoming Talks</h2>
           <div class="news-list">
             <div class="news-item">
-              <div class="date">Jan 2019</div>
+              <div class="date">Aug 23, 2019</div>
+              <div class="news-text">David will present progress on <a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">the Hazel editing experience</a> and Cyrus will present <a href="https://github.com/hazelgrove/livelits-tyde/blob/master/livelits-tyde.pdf">livelits in Hazel</a> at the <a href="https://icfp19.sigplan.org/home/tyde-2019">TyDe</a> workshop at <a href="https://icfp19.sigplan.org/home">ICFP 2019</a> in Berlin.</div>
+            </div>            
+            <div class="news-item">
+              <div class="date">Jan 17, 2019</div>
               <div class="news-text">Cyrus presented our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a> at <a href="https://popl19.sigplan.org/home">POPL 2019</a> in Lisbon.</div>
             </div>
             <div class="news-item">
