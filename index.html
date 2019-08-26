@@ -22,6 +22,19 @@
 
     <style>
         * { box-sizing: border-box; }
+
+        .contributor-list {
+          margin-bottom: 10px;
+        }
+
+        .contributor-item { 
+          display: grid;
+          grid-template-columns: auto 1fr;          
+        }
+
+        .contributor-item > .date {
+          text-align: right;
+        }
   
         body {
           margin: 0px;
@@ -96,11 +109,6 @@
 
         ul {
           line-height: 1.4;
-        }
-
-        .contributor-list {
-          margin-top: 0px;
-          margin-left: -20px;
         }
 
         .news-list {
@@ -301,7 +309,7 @@
               <h4>
                 Flexible Structure Editing of Well-Typed Expressions
               </h4>
-              <p>We are working on a <a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">keyboard-driven editing experience</a> that builds on your intuitions from text editing and that supports complex code reorganization patterns. We will do user studies.</p>
+              <p>We are working on a <a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">keyboard-driven editing experience</a> that builds on your intuitions from text editing and that supports complex code reorganization patterns. We are doing user studies.</p>
             </div>
             <div class="idea">
               <h4>
@@ -315,7 +323,7 @@
             </div>
             <div class="idea">
               <h4>Edit Action Synthesis and Suggestion</h4>
-              <p>We are thinking about how to suggest useful edit actions to the programmer by feeding the semantic data that Hazel makes available into program synthesis and machine learning algorithms.</p>
+              <p>We are thinking about how to build a programmer's assistant that suggests useful edit actions to the programmer by feeding the semantic data that Hazel makes available into program synthesis and machine learning algorithms.</p>
             </div>
             <div class="idea">
               <h4>Applications</h4>
@@ -333,21 +341,65 @@
         </div>
         <div class="card" id="contributors">
           <h2>Team Hazel</h2>
-    <ul class="contributor-list">
-      <li><a href="http://web.eecs.umich.edu/~comar">Cyrus Omar</a>, University of Michigan</li>
-      <li><a href="http://github.com/dmoon1221">David Moon</a>, University of Michigan</li>
-      <li><a href="http://michaeldadams.com/">Michael D. Adams</a>, University of Michigan</li>
-      <li><a href="http://www.cs.cmu.edu/~iev/">Ian Voysey</a>, Carnegie Mellon University</li>
-      <li><a href="https://github.com/nickcollins">Nick Collins</a>, University of Chicago</li>
-      <li><a href="https://github.com/charlesetc">Charles Chamberlain</a>, University of Chicago</li>
-      <li><a href="http://people.cs.uchicago.edu/~rchugh/">Ravi Chugh</a>, University of Chicago</li>
-      <li><a href="http://benshapi.ro/">Ben Shapiro</a>, University of Colorado Boulder</li> 
-      <li><a href="https://github.com/nmsmith">Nick Smith</a></li>
-      <li><a href="https://www.xuanruiqi.com/">Xuanrui (Ray) Qi</a></li>
+    <div class="contributor-list">
+      <div class="contributor-item">
+        <span class="name">
+          <a href="http://web.eecs.umich.edu/~comar">Cyrus Omar</a>
+        </span>
+        <span class="date">University of Michigan</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name">
+          <a href="http://github.com/dmoon1221">David Moon</a>
+        </span>
+        <span class="date">University of Michigan</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name">
+          <a href="http://michaeldadams.com/">Michael D. Adams</a>
+        </span>
+        <span class="date">University of Michigan</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name">
+          <a href="http://www.cs.cmu.edu/~iev/">Ian Voysey</a>
+        </span>
+        <span class="date">Carnegie Mellon University</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name">
+          <a href="https://github.com/nickcollins">Nick Collins</a>
+        </span>
+        <span class="date">University of Chicago</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name">
+          <a href="https://github.com/charlesetc">Charles Chamberlain</a>
+        </span>
+        <span class="date">University of Chicago</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name"><a href="http://people.cs.uchicago.edu/~rchugh/">Ravi Chugh</a></span>
+        <span class="date">University of Chicago</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name">
+          <a href="http://benshapi.ro/">Ben Shapiro</a>
+        </span>
+        <span class="date">University of Colorado Boulder</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name"><a href="https://github.com/nmsmith">Nick Smith</a></span>
+        <span class="date">Open Source Contributor</span>
+      </div>
+      <div class="contributor-item">
+        <span class="name"><a href="https://www.xuanruiqi.com/">Xuanrui (Ray) Qi</a></span>
+        <span class="date">Open Source Contributor</span>
+      </div>
       <!--<li><a href="http://matthewhammer.org/">Matthew A. Hammer</a></li>
       <li><a href="https://github.com/bkase">Brandon Kase</a></li>-->
-    </ul>
-    <p>If you are interested in working on Hazel, in any capacity, or you're looking for a mentor to help you learn the necessary type theory, or you just want to join the discussion on Slack, get in touch! </p>
+    </div>
+    <p>If you are interested in working on Hazel, or you'd like a mentor to help you learn the necessary type theory, or you just want to join the discussion on our Slack, get in touch! </p>
         </div>
 
         <!-- <div class="card" id="funding">
