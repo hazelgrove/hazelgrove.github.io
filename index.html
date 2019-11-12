@@ -27,15 +27,15 @@
           margin-bottom: 10px;
         }
 
-        .contributor-item { 
+        .contributor-item {
           display: grid;
-          grid-template-columns: auto 1fr;          
+          grid-template-columns: auto 1fr;
         }
 
         .contributor-item > .date {
           text-align: right;
         }
-  
+
         body {
           margin: 0px;
           background-color: wheat;
@@ -50,7 +50,7 @@
           padding-bottom: 20px;
           padding-left: 20px;
           font-size: 125%;
-          background-color: #073f24; 
+          background-color: #073f24;
           color: white
         }
 
@@ -126,7 +126,7 @@
           margin-bottom: 3px;
         }
 
-        a { 
+        a {
           color: #337ab7;
           text-decoration: none;
         }
@@ -146,7 +146,7 @@
           margin-top: 0px !important;
           padding-bottom: 5px;
           font-weight: bold;
-          text-transform: uppercase; 
+          text-transform: uppercase;
           font-size: 110%;
           color: #444;
           border-bottom: 1px solid #DDD;
@@ -213,37 +213,37 @@
         <div class="card" id="about">
           <h2>Project Summary</h2>
           <p>
-          When programming, we spend a substantial amount of our time working with program text 
-          that is not yet a formally complete program, e.g. because there are blank spots, type errors or merge conflicts at various locations.  
-          Conventional programming language definitions assign no formal meaning to structures like these, so program editors and other tools have no choice but to resort to complex and ad hoc heuristics to 
+          When programming, we spend a substantial amount of our time working with program text
+          that is not yet a formally complete program, e.g. because there are blank spots, type errors or merge conflicts at various locations.
+          Conventional programming language definitions assign no formal meaning to structures like these, so program editors and other tools have no choice but to resort to complex and ad hoc heuristics to
           provide various useful language services (like code completion, type inspection, code navigation, and live programming services) without gaps in service.
           </p>
 
           <p>
           We are developing a more principled approach to working with incomplete programs, rooted in (contextual modal and gradual) type theory.
           We model incomplete programs as programs with <em>holes</em>, which (1) stand for parts of the program that are missing; and (2) serve as membranes
-          around parts of the program that are erroneous or, in the collaborative setting, conflicted. 
+          around parts of the program that are erroneous or, in the collaborative setting, conflicted.
           </p>
 
           <p>
           We are implementing these ideas into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>/ML-like functional programming language being designed from the ground up around typed hole-driven development.</p>
-          
+
           <p>Uniquely, every incomplete program that you can construct using Hazel's language of type-aware edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
           a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel serves as an elegant platform for research on the future of programming.</p>
-          
+
           <!-- <p>
           The <a href="./hazel/hazel.html">Hazel implementation</a> is a work-in-progress. As Hazel evolves, we plan to apply it first to teach introductory functional programming courses. As it evolves further, we plan to use Hazel to do data anlysis, music and visual art. One day, we plan for Hazel to serve as the foundation of a new kind of computational wiki.</p>
           -->
 
           <!--
           <p class="col-md-12">
-          This substantially simplifies the design of a 
-          number of powerful editor services, and it substantially tightens the feedback loop between the programmer and the programming environment. 
+          This substantially simplifies the design of a
+          number of powerful editor services, and it substantially tightens the feedback loop between the programmer and the programming environment.
           Put pithily, Hazel is as live as it gets!
           </p>
           -->
 
-          <p>The following paper describes our research vision in more detail.            
+          <p>The following paper describes our research vision in more detail.
             <div class="paper">
               <a class="major-paper" href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a><br />
               <strong>SNAPL 2017</strong> [<a href="./hazel.bib">.bib</a>]
@@ -257,8 +257,8 @@
       <p>The following research paper details Hazelnut.</p>
       <div class="paper">
         <a class="major-paper" href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a><br />
-        C. Omar, I. Voysey, M. Hilton, J. Aldrich and M. Hammer<br /> 
-        <strong>POPL 2017</strong> [<a href="./hazel.bib">.bib</a>] 
+        C. Omar, I. Voysey, M. Hilton, J. Aldrich and M. Hammer<br />
+        <strong>POPL 2017</strong> [<a href="./hazel.bib">.bib</a>]
         [<a href="./hazelnut-popl17-talk.pdf">slides</a>]
       </div>
       <br />
@@ -275,10 +275,10 @@
     </div>
     <div class="card" id="hazelnut-live">
         <h2>Hazelnut Live (POPL 2019)</h2>
-        <p>  
+        <p>
         Next, we developed <strong>Hazelnut Live</strong>, which contributes a dynamic semantics for expressions with holes in both expression and type position. Rather than stopping as soon as we encounter a hole at run-time,  we continue evaluation as far as possible, producing a result containing hole closures.  Hole closures allow us to continuously provide granular live feedback to the programmer, and to resume evaluation once a hole is filled.
         </p>
-        <p>The following research paper details how we achieve this by adapting machinery from gradual type theory and contextual modal type theory. 
+        <p>The following research paper details how we achieve this by adapting machinery from gradual type theory and contextual modal type theory.
               <div class="paper">
                 <a class="major-paper" href="https://arxiv.org/pdf/1805.00155">Live Functional Programming with Typed Holes</a><br />
                 C. Omar, I. Voysey, R. Chugh and M. Hammer<br />
@@ -293,7 +293,7 @@
         <li><a href="./live-2017.pdf">Slides</a></li>
               </ul>-->
         <!--<h4>OBT 2017 Presentation</h4>
-        Ian presented a much earlier take on this work at the Off the Beaten Track (OBT) workshop at POPL 2017. 
+        Ian presented a much earlier take on this work at the Off the Beaten Track (OBT) workshop at POPL 2017.
         <ul>
           <li>
             <a href="http://www.cs.cmu.edu/~iev/resources/dynamics-obt17.pdf">Running Incomplete Programs</a> (Extended Abstract, OBT 2017)
@@ -459,14 +459,14 @@
             </div>
           </div>
         </div>
-        
+
         <div class="card" id="talks">
           <h2>Recent &amp; Upcoming Talks</h2>
           <div class="news-list">
             <div class="news-item">
               <div class="date">Aug 18, 2019</div>
               <div class="news-text">David presented progress on the Hazel editing experience [<a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">extended abstract</a>] and Cyrus presented livelits in Hazel [<a href="./talks/livelits-tyde19.pdf">slides</a>, <a href="https://github.com/hazelgrove/livelits-tyde/blob/master/livelits-tyde.pdf">extended abstract</a>] at the <a href="https://icfp19.sigplan.org/home/tyde-2019">TyDe</a> workshop at <a href="https://icfp19.sigplan.org/home">ICFP 2019</a> in Berlin.</div>
-            </div>            
+            </div>
             <div class="news-item">
               <div class="date">Jan 17, 2019</div>
               <div class="news-text">Cyrus presented our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a> at <a href="https://popl19.sigplan.org/home">POPL 2019</a> in Lisbon.</div>
