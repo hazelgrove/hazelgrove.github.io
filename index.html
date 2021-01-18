@@ -280,7 +280,10 @@
     <div class="card" id="hazelnut-live">
         <h2>Hazelnut Live (POPL 2019)</h2>
         <p>
-        Next, we developed <strong>Hazelnut Live</strong>, which contributes a dynamic semantics for expressions with holes in both expression and type position. Rather than stopping as soon as we encounter a hole at run-time,  we continue evaluation as far as possible, producing a result containing hole closures.  Hole closures allow us to continuously provide granular live feedback to the programmer, and to resume evaluation once a hole is filled.
+        Next, we developed <strong>Hazelnut Live</strong>, 
+        which contributes a dynamic semantics for expressions with holes in both expression and type position.</p>
+        <p>
+          Rather than stopping as soon as we encounter a hole at run-time,  we continue evaluation as far as possible, producing a result containing hole closures.  Hole closures allow us to continuously provide granular live feedback to the programmer, and to resume evaluation once a hole is filled.
         </p>
         <p>The following research paper details how we achieve this by adapting machinery from gradual type theory and contextual modal type theory.
               <div class="paper">
@@ -304,6 +307,30 @@
           </li>
           <li><a href="http://www.cs.cmu.edu/~iev/resources/obt17-slides.pdf">Annotated slides</a></li>-->
         </div>
+      
+      <div class="card">
+        <h2>Hazel Assistant (ICFP 2020)</h2>
+        <p>
+          The <strong>Hazel Assistant</strong> project is focused on developing an interactive programming assistant that 
+          synthesizes code satisfying specifications provided in the form of types, tests, and sketches.
+        </p>
+        <p>
+          To start with, we developed the <a href="https://uchicago-pl.github.io/smyth"><strong>Smyth</strong></a> synthesizer, which adds support for sketching to <a href="https://osera.cs.grinnell.edu/publications/osera-pldi-2015.pdf">Myth</a>, 
+          a type-and-example directed synthesizer, 
+          by combining the live programming mechanisms from Hazelnut Live with a novel 
+          form of unevaluation, which propagates constraints to where they are relevant. Our approach solves a long-standing
+          problem: we no longer need a <emph>trace-complete</emph> set of examples.
+        <div class="paper">
+          <a class="major-paper" href="https://arxiv.org/pdf/1911.00583.pdf">Program Sketching with Live Bidirectional Evaluation</a><br />
+          J. Lubin, N. Collins, C. Omar, and R. Chugh<br />
+          <strong>ICFP 2020</strong> [<a href="./hazel.bib">.bib</a>, <a href="https://uchicago-pl.github.io/smyth/">tutorial</a>]
+        </div>
+      </p>
+        <p>
+          We are now working to scale up and integrate Smyth into the Hazel user interface, which requires considering the problems of interactivity, incrementality, and readability.
+          Check out our <a href="https://twitter.com/dm_0ney/status/1334192747457163265">first demo</a>!
+        </p>
+      </div>
 
         <div class="card">
           <h2>Incubating Ideas</h2>
@@ -313,7 +340,7 @@
               <h4>
                 Linearly Editing Typed Trees
               </h4>
-              <p>We are working on a <a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">keyboard-driven editing experience</a> that builds on your intuitions from text editing and that supports complex code reorganization patterns. We are doing user studies.</p>
+              <p>We are working on a <a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">keyboard-driven editing experience</a> that builds on your intuitions from text editing and that supports complex code restructuring patterns. We are doing user studies.</p>
             </div>
             <div class="idea">
               <h4>
@@ -326,12 +353,14 @@
               <p>We are thinking about how to specify an edit action semantics that obeys the invariants necessary to make a Hazelnut program a <a href="http://christophermeiklejohn.com/crdt/2014/07/22/readings-in-crdts.html">convergent replicated data type (CRDT)</a>.</p>
             </div>
             <div class="idea">
-              <h4>Hazel Assistant</h4>
-              <p>We are thinking about how to build a programming assistant that suggests useful edit actions to the programmer by feeding the semantic data that Hazel makes available into program synthesis and machine learning algorithms.</p>
+              <h4>Hazel Tutor: Guiding Novices Through Type-Driven Development Strategies</h4>
+              <p>We are planning to use Hazel to teach introductory functional programming. We are developing a number of mechanisms to support this, 
+                including <a href="hazeltutor-hatra2020.pdf">a type-driven cursor inspector and strategy guide</a>.
+              </p>
             </div>
             <div class="idea">
-              <h4>Applications</h4>
-              <p>As Hazel evolves, we plan to apply it first to teach introductory functional programming, and later on we plan to use Hazel to support data analysis (think a next-generation <a href="http://jupyter.org/">Jupyter</a>). One day, we hope that Hazel will be the foundation for a new kind of computational wiki.</p>
+              <h4>Other Applications</h4>
+              <p>As Hazel evolves, we plan to use Hazel to support data analysis (think a next-generation <a href="http://jupyter.org/">Jupyter</a>). One day, we hope that Hazel will be the foundation for a new kind of computational wiki.</p>
             </div>
           </div>
         </div>
@@ -366,8 +395,14 @@
           <h2>News</h2>
           <div class="news-list">
             <div class="news-item">
+              <div class="date">Aug 2020</div>
+              <div class="news-text">
+                <a href="https://icfp20.sigplan.org/">ICFP 2020</a> published our <a href="https://arxiv.org/pdf/1911.00583.pdf">Smyth paper</a>.
+              </div>
+            </div>
+            <div class="news-item">
               <div class="date">Sep 2019</div>
-              <div class="news-text"><a href="https://people.cs.uchicago.edu/~comar/">Cyrus</a> started as an Assistant Professor at the University of Michigan. <a href="https://twitter.com/dmoon1221">David Moon</a> joined him as a PhD student. <a href="https://michaeldadams.org/">Michael D. Adams</a> also joined as a Research Scientist.</div>
+              <div class="news-text"><a href="https://people.cs.uchicago.edu/~comar/">Cyrus</a> started as an Assistant Professor at the University of Michigan.</div>
             </div>
             <div class="news-item">
               <div class="date">Jan 2019</div>
@@ -400,8 +435,20 @@
           <h2>Recent &amp; Upcoming Talks</h2>
           <div class="news-list">
             <div class="news-item">
+              <div class="date">Dec 2, 2020</div>
+              <div class="news-text">Hannah Potter presented progress on <a href="hazeltutor-hatra2020.pdf">Hazel Tutor</a> at <a href="https://2020.splashcon.org/home/hatra-2020?plenary=Hide%20plenary%20sessions#About">HATRA 2020</a>.</div>
+            </div>
+            <div class="news-item">
+              <div class="date">Aug 26, 2020</div>
+              <div class="news-text">Justin Lubin <a href="https://dl.acm.org/doi/10.1145/3408991">presented</a> our <a href="https://arxiv.org/pdf/1911.00583.pdf">Smyth paper</a> at ICFP 2020.</div>
+            </div>
+            <div class="news-item">
+              <div class="date">Aug 26, 2020</div>
+              <div class="news-text">Zhiyi Pan won Third Place in the Undergraduate category of the ICFP Student Research Competition for her work on Type Hole Inference. Yongwei Yuan also presented his work on Pattern Matching with Typed Holes.</div>
+            </div>
+            <div class="news-item">
               <div class="date">Sep 23, 2019</div>
-              <div class="news-text">Cyrus and David presented progress on the Hazel editing experience and livelits at the <a href="https://purpl.cs.purdue.edu/kickoff.html">Midwest PL Summit at Purdue.</div>
+              <div class="news-text">Cyrus and David presented progress on the Hazel editing experience and livelits at the <a href="https://purpl.cs.purdue.edu/kickoff.html">Midwest PL Summit at Purdue</a>.</div>
             </div>
             <div class="news-item">
               <div class="date">Aug 18, 2019</div>
