@@ -111,9 +111,15 @@
           line-height: 1.4;
         }
 
+        .talks-list {
+          padding-left: 0;
+        }
+
         .news-list {
           padding-left: 0px;
-          margin-bottom: -10px;
+          display: grid;
+          grid-template-columns: auto 1fr;
+          row-gap: 16px;
         }
 
         .news-item {
@@ -124,12 +130,23 @@
           color: #999;
           font-weight: normal;
           margin-bottom: 3px;
+          margin-right: 10px;
+        }
+
+        .news-text {
         }
 
         a {
           color: #337ab7;
           text-decoration: none;
+          font-weight: bold;
         }
+
+        a:hover {
+          color:  #11293f;
+        }
+
+        #try-it .btn:hover { color: white }
 
         .major-paper {
           font-weight: bold;
@@ -219,8 +236,12 @@
           <p>
           When programming, we spend a substantial amount of our time working with program text
           that is not yet a formally complete program, e.g. because there are blank spots, type errors or merge conflicts at various locations.
-          Conventional programming language definitions assign no formal meaning to structures like these, so program editors and other tools have no choice but to resort to complex and ad hoc heuristics to
-          provide various useful language services (like code completion, type inspection, code navigation, and live programming services) without gaps in service.
+          </p>
+
+          <p>
+          Conventional programming language definitions assign no formal meaning to structures like these, so we are left without live feedback about the behavior of even complete portions of the program. 
+          Moreover, program editors and other tools have no choice but to resort to complex and <i>ad hoc</i> heuristics to
+          provide various useful language services (like code completion, type inspection, and code navigation) without gaps in service.
           </p>
 
           <p>
@@ -229,11 +250,21 @@
           around parts of the program that are erroneous or, in the collaborative setting, conflicted.
           </p>
 
+          <p>The following paper describes our research vision in more detail.
+            <div class="paper">
+              <a class="major-paper" href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a><br />
+              <strong>SNAPL 2017</strong> [<a href="./hazel.bib">.bib</a>]
+              [<a href="./hazel-snapl17.pdf">slides</a>]
+            </div>
+          </p>
+        </div>
+        <div class="card">
+          <h2>Hazel</h2>
           <p>
-          We are implementing these ideas into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>/ML-like functional programming language being designed from the ground up around typed hole-driven development.</p>
+          We are first implementing these ideas into <strong>Hazel</strong>, a web-based programming environment for an <a href="http://elm-lang.org/">Elm</a>/ML-like functional programming language designed around typed-hole-driven development.</p>
 
-          <p>Uniquely, every incomplete program that you can construct using Hazel's language of type-aware edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
-          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel serves as an elegant platform for research on the future of programming.</p>
+          <p>Uniquely, every incomplete program that you can construct using Hazel's language of edit actions is both <em>statically</em> and <em>dynamically</em> well-defined, i.e. it has
+          a (possibly incomplete) type, and you can run it to produce a (possibly incomplete) result. Consequently, Hazel serves as an elegant platform for research on the future of programming (and programming education).</p>
 
           <!-- <p>
           The <a href="./hazel/hazel.html">Hazel implementation</a> is a work-in-progress. As Hazel evolves, we plan to apply it first to teach introductory functional programming courses. As it evolves further, we plan to use Hazel to do data anlysis, music and visual art. One day, we plan for Hazel to serve as the foundation of a new kind of computational wiki.</p>
@@ -247,17 +278,41 @@
           </p>
           -->
 
-          <p>The following paper describes our research vision in more detail.
-            <div class="paper">
-              <a class="major-paper" href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a><br />
-              <strong>SNAPL 2017</strong> [<a href="./hazel.bib">.bib</a>]
-              [<a href="./hazel-snapl17.pdf">slides</a>]
-            </div>
-          </p>
         </div>
+        <div class="card" id="news">
+          <h2>News</h2>
+          <div class="news-list">
+              <div class="date">June 2021</div>
+              <div class="news-text"><a href="https://pldi21.sigplan.org/">PLDI 2021</a> published <a href="./papers/livelits-paper.pdf">Filling Typed Holes with Live GUIs</a> describing <a href="#livelits">live literals (livelits)</a> in Hazel.</div>
+
+              <div class="date">Aug 2020</div>
+              <div class="news-text">
+                <a href="https://icfp20.sigplan.org/">ICFP 2020</a> published <a href="https://arxiv.org/pdf/1911.00583.pdf">Program Sketching with Live Bidirectional Evaluation</a> describing <a href="https://uchicago-pl.github.io/smyth">Smyth</a>, a foundational component of the <a href="#assistant">Hazel Assistant</a>.
+              </div>
+            
+              <!-- <div class="date">Sep 2019</div>
+              <div class="news-text"><a href="https://people.cs.uchicago.edu/~comar/">Cyrus</a> started as an Assistant Professor at the University of Michigan.</div>             -->
+            
+              <div class="date">Jan 2019</div>
+              <div class="news-text"><a href="https://popl19.sigplan.org/home">POPL 2019</a> published <a href="https://arxiv.org/pdf/1805.00155">Live Functional Programming with Typed Holes</a> which develops <a href="#hazelnut-live">a rich operational semantics</a> for expressions with typed holes.</div>
+            
+              <div class="date">Sep 2018</div>
+              <div class="news-text"><a href="http://www.thestrangeloop.com">Strange Loop</a> hosted <a href="https://www.thestrangeloop.com/2018/hazel-a-live-functional-programming-environment-with-typed-holes.html">a presentation on Hazel</a>.</div>
+            
+              <div class="date">May 2018</div>
+              <div class="news-text"><a href="https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Semantic+Foundations+for+Hole-Driven+Development%22">NSF</a> selected the research that Cyrus, Ravi and Matthew proposed for funding.</div>
+            
+              <div class="date">May 2017</div>
+              <div class="news-text"><a href="http://snapl.org">SNAPL 2017</a> published <a href="https://arxiv.org/pdf/1703.08694">Toward Semantic Foundations for Program Editors</a> describing our broad research vision.</div>
+            
+              <div class="date">Jan 2017</div>
+              <div class="news-text"><a href="http://popl17.sigplan.org/program/program-POPL-2017">POPL 2017</a> published <a href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a>, which defines <a href="#hazelnut">a calculus of structured edit actions</a> that insert typed holes automatically.</div>
+          </div>
+        </div>
+
         <div class="card" id="hazelnut-popl17">
-          <h2>Hazelnut (POPL 2017)</h2>
-      <p>To start, we developed a core calculus, <strong>Hazelnut</strong>, that contributes (1) a static semantics (i.e. type system) for expressions with holes in both expression and type position, and (2) a language of edit actions that insert holes automatically to ensure that every edit state has static meaning.</p>
+          <h2><a name="hazelnut"></a>Hazelnut (POPL 2017)</h2>
+      <p>To start, we developed a core calculus, <strong>Hazelnut</strong>, that defines (1) a static semantics (i.e. type system) for expressions with holes in both expression and type position, and (2) a language of edit actions that insert holes automatically to ensure that every edit state has static meaning.</p>
       <p>The following research paper details Hazelnut.</p>
       <div class="paper">
         <a class="major-paper" href="https://arxiv.org/pdf/1607.04180">Hazelnut: A Bidirectionally Typed Structure Editor Calculus</a><br />
@@ -278,7 +333,7 @@
       -->
     </div>
     <div class="card" id="hazelnut-live">
-        <h2>Hazelnut Live (POPL 2019)</h2>
+        <h2><a name="hazelnut-live"></a>Hazelnut Live (POPL 2019)</h2>
         <p>
         Next, we developed <strong>Hazelnut Live</strong>, 
         which contributes a dynamic semantics for expressions with holes in both expression and type position.</p>
@@ -309,7 +364,7 @@
         </div>
       
       <div class="card">
-        <h2>Hazel Assistant (ICFP 2020)</h2>
+        <h2><a name="assistant"></a>Hazel Assistant (ICFP 2020)</h2>
         <p>
           We are developing an intelligent programming assistant that synthesizes code satisfying specifications provided by human programmers in the form of types, tests, and sketches, and further guided by a learned understanding of idiomatic code.        </p>
         <p>
@@ -330,6 +385,28 @@
         </p>
       </div>
 
+      <div class="card">
+        <h2><a name="livelits"></a>Livelits: Filling Typed Holes with Live GUIs (PLDI 2021)</h2>
+        <p>
+          Symoblic representations are powerful, but some types of expessions are more naturally represented and manipulated non-symbolically.
+          Examples include expressions that compute colors, music, animations, tabular data, plots, diagrams, and other domain-specific data structures.
+        </p>
+        <p>
+          This paper introduces live literals, or livelits, which allow clients to fill holes of types like these by directly manipulating a user-defined GUI 
+          embedded persistently into code.
+          </p>
+        <p>Uniquely, livelits are compositional: a livelit GUI can itself embed spliced expressions, which are typed, lexically scoped, and can in turn embed other livelits.</p>
+        <p>Livelits are also uniquely live: a livelit can provide continuous feedback about the run-time implications of the client's choices even when splices mention bound variables.</p>
+        <div class="paper">
+          <a class="major-paper" href="./papers/livelits-paper.pdf">Filling Typed Holes with Live GUIs</a><br />
+          C. Omar, D. Moon, A. Blinn, I. Voysey, N. Collins, and R. Chugh<br />
+          <strong>PLDI 2021</strong> [<a href="./hazel.bib">.bib</a>, <a href="https://hazel.org/livelits/">demo</a>]
+        </div>
+        <br />
+        <div>We have <a href="https://github.com/hazelgrove/agda-popl17">mechanized the metatheory of livelits</a> using the <a href="http://wiki.portal.chalmers.se/agda/pmwiki.php">Agda</a> proof assistant.</div>
+      </p>
+      </div>
+
         <div class="card">
           <h2>Incubating Ideas</h2>
           <p>We have a number of ideas incubating &mdash; if you're interested in any of these, definitely get in touch. We would also love to hear about other ideas you might have.</p>
@@ -341,14 +418,14 @@
               <p>We are working on a <a href="https://github.com/hazelgrove/editor-tyde19/blob/master/editor-tyde19.pdf">keyboard-driven editing experience</a> that builds on your intuitions from text editing and that supports complex code restructuring patterns. We are doing user studies.</p>
             </div>
             <div class="idea">
-              <h4>
-                Livelits: Filling Typed Holes with Live GUIs
-              </h4>
-              <p>We are working on allowing programmers to <a href="https://github.com/hazelgrove/livelits-tyde/blob/master/livelits-tyde.pdf">fill holes by direct manipulation of live GUIs with holes</a>.</p>
-            </div>
-            <div class="idea">
               <h4>Collaborative Structure Editing with CRDTs</h4>
               <p>We are thinking about how to specify an edit action semantics that obeys the invariants necessary to make a Hazelnut program a <a href="http://christophermeiklejohn.com/crdt/2014/07/22/readings-in-crdts.html">convergent replicated data type (CRDT)</a>.</p>
+            </div>
+            <div class="idea">
+              <h4>
+                Authoring with Livelits 
+              </h4>
+              <p>We are working on integrating document authoring with programming via livelits: document editing is programming, too.</p>
             </div>
             <div class="idea">
               <h4>Hazel Tutor: Guiding Novices Through Type-Driven Development Strategies</h4>
@@ -373,13 +450,13 @@
         <div class="card" id="contributors">
           <h2>Team Hazel</h2>
           <div class="contributor-list">
-            <p>Hazel is an open source project led by the 
+            <p>Hazel is an open source research project led by the 
             <strong><a href="http://fplab.mplse.org/">Future of Programming Lab (FP Lab)</a></strong>
             at the University of Michigan.</p>
-            <p>Hazel has benefited from the work of many 
+            <p>Hazel has benefited from the effort of many 
               <strong><a href="https://github.com/hazelgrove/hazel/blob/dev/CONTRIBUTORS.md">contributors</a></strong>.
             </p>
-            <p>If you are interested in contributing to Hazel, or you'd like to join the Slack where we help folks learn the necessary type theory and discuss project directions,  get in touch with <strong><a href="https://web.eecs.umich.edu/~comar">Cyrus</a></strong>! </p>
+            <p>If you are interested in contributing to Hazel, get in touch with the team lead, <strong><a href="https://web.eecs.umich.edu/~comar">Cyrus Omar</a></strong>.</p>
           </div>
         </div>
 
@@ -389,49 +466,13 @@
           NSF
         </div> -->
 
-        <div class="card" id="news">
-          <h2>News</h2>
-          <div class="news-list">
-            <div class="news-item">
-              <div class="date">Aug 2020</div>
-              <div class="news-text">
-                <a href="https://icfp20.sigplan.org/">ICFP 2020</a> published our <a href="https://arxiv.org/pdf/1911.00583.pdf">Smyth paper</a>.
-              </div>
-            </div>
-            <div class="news-item">
-              <div class="date">Sep 2019</div>
-              <div class="news-text"><a href="https://people.cs.uchicago.edu/~comar/">Cyrus</a> started as an Assistant Professor at the University of Michigan.</div>
-            </div>
-            <div class="news-item">
-              <div class="date">Jan 2019</div>
-              <div class="news-text"><a href="https://popl19.sigplan.org/home">POPL 2019</a> published our <a href="https://arxiv.org/pdf/1805.00155">Hazelnut Live paper</a>.</div>
-            </div>
-            <div class="news-item">
-              <div class="date">Sep 2018</div>
-              <div class="news-text"><a href="http://www.thestrangeloop.com">Strange Loop</a> hosted <a href="https://www.thestrangeloop.com/2018/hazel-a-live-functional-programming-environment-with-typed-holes.html">a presentation on Hazel</a>.</div>
-            </div>
-            <div class="news-item">
-              <div class="date">May 2018</div>
-              <div class="news-text"><a href="https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Semantic+Foundations+for+Hole-Driven+Development%22">NSF</a> selected the research that Cyrus, Ravi and Matthew proposed for three years of funding.</div>
-            </div>
-            <!-- <div class="news-item">
-              <div class="date">Jan 2018</div>
-              <div class="news-text">Operators now re-associate dynamically during editing and cursor movement is now textual!</div>
-            </div> -->
-            <div class="news-item">
-              <div class="date">May 2017</div>
-              <div class="news-text"><a href="http://snapl.org">SNAPL 2017</a> published our <a href="https://arxiv.org/pdf/1703.08694">vision paper</a>.</div>
-            </div>
-            <div class="news-item">
-              <div class="date">Jan 2017</div>
-              <div class="news-text"><a href="http://popl17.sigplan.org/program/program-POPL-2017">POPL 2017</a> published our <a href="https://arxiv.org/pdf/1607.04180">Hazelnut paper</a>.</div>
-            </div>
-          </div>
-        </div>
-
         <div class="card" id="talks">
           <h2>Recent &amp; Upcoming Talks</h2>
-          <div class="news-list">
+          <div class="talks-list">
+            <div class="news-item">
+              <div class="date">June 24, 2021</div>
+              <div class="news-text">Cyrus Omar presented our <a href="./papers/livelits-paper.pdf">Livelits paper</a> at <a href="https://pldi21.sigplan.org/details/pldi-2021-papers/34/Filling-Typed-Holes-with-Live-GUIs">PLDI 2021</a>.</div>
+            </div>
             <div class="news-item">
               <div class="date">Dec 2, 2020</div>
               <div class="news-text">Hannah Potter presented progress on <a href="hazeltutor-hatra2020.pdf">Hazel Tutor</a> at <a href="https://2020.splashcon.org/home/hatra-2020?plenary=Hide%20plenary%20sessions#About">HATRA 2020</a>.</div>
@@ -446,7 +487,7 @@
             </div>
             <div class="news-item">
               <div class="date">Sep 23, 2019</div>
-              <div class="news-text">Cyrus and David presented progress on the Hazel editing experience and livelits at the <a href="https://purpl.cs.purdue.edu/kickoff.html">Midwest PL Summit at Purdue</a>.</div>
+              <div class="news-text">David Moon and Cyrus Omar presented progress on the Hazel editing experience and livelits at the <a href="https://purpl.cs.purdue.edu/kickoff.html">Midwest PL Summit at Purdue</a>.</div>
             </div>
             <div class="news-item">
               <div class="date">Aug 18, 2019</div>
