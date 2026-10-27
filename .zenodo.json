@@ -1,0 +1,14 @@
+{
+  "title": "Hazel: A Live Functional Programming Environment with Typed Holes",
+  "upload_type": "software",
+  "description": "Hazel is a live functional programming environment with typed holes, developed as an open source research project by the Future of Programming Lab at the University of Michigan. This record archives the hazel.org website.",
+  "creators": [
+    { "name": "Omar, Cyrus", "affiliation": "University of Michigan", "orcid": "0000-0003-4502-7971" },
+    { "name": "The Hazel Team" }
+  ],
+  "related_identifiers": [
+    { "identifier": "https://hazel.org", "relation": "isIdenticalTo", "scheme": "url" },
+    { "identifier": "https://github.com/hazelgrove/hazel", "relation": "isSupplementedBy", "scheme": "url" }
+  ],
+  "license": "cc-by-4.0"
+}
